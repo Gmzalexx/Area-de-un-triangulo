@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Area_de_un_triangulo.MainPage"
+             xmlns:viewModel="clr-namespace:Area_de_un_triangulo">
+    
+
+    <ContentPage.BindingContext>
+        <viewModel:triangulomvvm />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10">
+        <Entry Placeholder="Lado 1" Text="{Binding Lado1}"  />
+        <Entry Placeholder="Lado 2" Text="{Binding Lado2}"  />
+        <Entry Placeholder="Lado 3" Text="{Binding Lado3}"  />
+        <Button Text="Calcular Área" Command="{Binding Calcularaeracomando}" />
+        <Label Text="Área:" />
+        <Label Text="{Binding Area}" />
+    </StackLayout>
+
+</ContentPage>
